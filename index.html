@@ -4,19 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <title>Book Finder</title> -->
-
-    <body>
-        <h1>Book Finder</h1>
-        <div class="wrap">
-          <div class="search">
-            <input type="text" class="searchTerm" id="searchTerm" placeholder="Type">
-            <button type="submit" id="submit" class="searchButton">
-              <i class="fa fa-search"></i>Search
-            </button>
-          </div>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" 
+    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+    <link rel='stylesheet' href="./style.css"/>
+  </head>
+  <body>
+    <nav class="container">
+        <header class="pure-g">
+            <div class="pure-u-1-1"><h1>BookFinder</h1></div> 
+        </header>
+    </nav>
+    <section>
+        <div class="wrap"> 
+            <div class="search pure-form">
+                <input type="text" class="pure-input-2-3 SearchTerm" id="searchTerm" placeholder="Search by author, genre..." />
+                <button type="submit" id="submit" class="pure-button searchButton">
+                    <i class="fa fa-search"></i>Search
+                </button>
+                <br />
+            </div>
         </div>
         <script src="./script.js"></script>
-      </body>
-
+    </section>
+    <section>
+      <div class="ui grid">
+        <div class="four wide column">
+          <img>
+        </div>
+        <div class="nine wide column">
+          <p></p>
+        </div>
+        <div class="three wide column">
+          <p></p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
+
