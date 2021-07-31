@@ -1,24 +1,88 @@
 body{
-  background-color: rgb(236, 246, 250);
+  margin:0;
+}
+h1,h2,h3{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
-nav{
-  color: rgb(177, 214, 155);
+header{
+  padding: 20px;
+  margin:0;
   background: rgb(12, 1, 59);
 }
-
-.container{
-  width: 100%;
-  padding: 10px;
+.ui.header{
+  color: rgb(177, 214, 155);
 }
 
-.search{
-  margin:30px;
-  text-align: center;
+.hero{
+  background: url(./assets/herolake.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 20%;
+  display: flex;
+}
+
+.search-box{
+  padding: 0 20px;
+  width:100%;
+}
+.books{
+  padding-top: 20px;
+}
+
+.book .img-box{
+  min-height: 100px;
+}
+
+.book img{
+  height: auto;
+  width: 100%;
+}
+
+.book .title{
+  padding-bottom: 5px;
+}
+
+.book .authors{
+  padding-bottom: 10px;
+}
+
+.book .desc{
+  text-overflow: ellipsis;
+  max-height: 200px;
+  overflow: hidden;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.ui.grid>.row >.column.book{
+  margin-bottom: 40px;
+}
+.nobooks{
+  padding: 40px 0;
+  font-size: 24px;
 }
 
 footer{
-  color: rgb(177, 214, 155);
+  position: relative;
+  bottom: 0;
+  color: #fff;
   background: rgb(12, 1, 59);
+  padding: 40px;
+  margin: 0;
 }
 
+
+@media only screen and (max-width: 767px){
+  .ui.search-box{
+      width: 100% !important;
+  }
+
+  .ui.grid>.row >.column.book{
+      width:100%;
+  }
+}
