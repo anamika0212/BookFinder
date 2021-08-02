@@ -24,6 +24,12 @@ function initPage() {
     searchEl.addEventListener("click", function () {
         const searchTerm = document.getElementById("searchTerm").value;
         fetchBooks(searchTerm);
+        saveBookSearch(searchTerm);
+    })
+    const searchEl2 = document.getElementById("submit2"); 
+    searchEl2.addEventListener("click", function () {
+        const searchTerm = document.getElementById("searchTerm").value;
+        fetchByVolume(searchTerm);   
     })
 }
 
@@ -63,5 +69,63 @@ function fetchBooks(q) {
             }
         });
 }
+
+function fetchByVolume(q){
+   
+    if(q == undefined || q == ''){
+        $(".books .row").html(errorMessage);
+        return;
+    } 
+
+    fetch('https://www.googleapis.com/books/v1/volumes/'+ q).then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        $(".books .row").html('');
+        if(data.volumeInfo){
+            $(".books .row").append(renderBook(data.volumeInfo));
+        }
+        else{
+            $(".books .row").html(errorMessage);
+        }
+    });
+}
+
+
+function saveBookSearch(element) {
+    
+      // get saved books from localstorage, or if not any, set to empty array
+      var bookList =
+        JSON.parse(window.localStorage.getItem("bookList")) || [];
+      // save to localstorage
+      bookList.push(element);
+      window.localStorage.setItem("bookList", JSON.stringify(bookList));
+     console.log(bookList);
+  }
+
+  function showBookSearchHistory() {
+    // either get books from localstorage or set to empty array
+    var bookList = JSON.parse(window.localStorage.getItem("bookList")) || [];
+  
+  
+    bookList.forEach(function(score) {
+      // create li tag for each book search
+      var liTag = document.createElement("li");
+      liTag.textContent = score.initials + " - " + score.score;
+      // display on page
+      var olEl = document.getElementById("bookListItem");
+      olEl.appendChild(liTag);
+    });
+    var bookListItem = document.getElementById("bookListItem");
+    bookListItem.style.display ="block";
+
+  }
+
+
+  function clearBookSearch() {
+    window.localStorage.removeItem("bookList");
+    window.location.reload();
+  }
 
 initPage();
