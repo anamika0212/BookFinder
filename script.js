@@ -18,6 +18,7 @@ function renderBook(book) {
     </div>`;
 }
 
+// search the results for books of the following name 
 function initPage() {
     const searchEl = document.getElementById("submit");
     searchEl.addEventListener("click", function () {
@@ -26,6 +27,7 @@ function initPage() {
     })
 }
 
+// clear the results out search feild and clear the page without refresh 
 refreshButton.addEventListener("click", () => {
     const errorMessage = '<div class="nobooks ui container"></div>';
     $(".books .row").html(errorMessage);
