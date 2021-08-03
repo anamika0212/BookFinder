@@ -76,10 +76,22 @@ footer{
   margin: 0;
 }
 
+.ui.buttons.btn-group{
+  margin: 20px 0px;
+  text-align: center;
+  display: block;
+
+}
+
 
 @media only screen and (max-width: 767px){
   .ui.search-box{
       width: 100% !important;
+      padding: 0;
+  }
+
+  .hero .ui.container{
+    width: 100% !important;
   }
 
   .ui.grid>.row >.column.book{

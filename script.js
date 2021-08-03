@@ -2,6 +2,7 @@
 const errorMessage = '<div class="nobooks ui container">No books found. Enter author, genre or title</div>';
 
 var refreshButton = document.getElementById("refresh");
+var btnFeedback =document.getElementById("btnFeedback");
 
 function renderBook(book) {
     return `<div class="column book">
@@ -11,12 +12,14 @@ function renderBook(book) {
             </div>
             <div class="twelve wide column">
                 <h2 class="title">${book.title}</h2>
-                <h3 class="authors">by ${book.authors ? book.authors.join(',') : ''}</h3>
+                <h3 class="authors">by ${book.authors ? book.authors.join(', ') : ''}</h3>
                 <p class="desc">${book.description ? book.description : ''}</p>
             </div>
         </div>
     </div>`;
 }
+
+
 
 // search the results for books of the following name 
 function initPage() {
@@ -39,6 +42,13 @@ refreshButton.addEventListener("click", () => {
     $(".books .row").html(errorMessage);
     document.getElementById("searchTerm").value = "";
 })
+
+btnFeedback.addEventListener("click", () => {
+    $('#modalFeedback')
+    .modal('show')
+    ;
+});
+
 
 // fetch('https://www.googleapis.com/books/v1/volumes?q='+ searchTerm).then(function(response){
 //     return response.json();

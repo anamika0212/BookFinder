@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Book Finder</title>
+    <title>Book</title>
     <link rel="stylesheet" type="text/css" href="./assets/semantic.min.css">
     <link rel='stylesheet' href="./style.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -21,11 +21,15 @@
     </header>
 
     <section class="hero">
-        <div class="ui action input search-box container">
-            <input id="searchTerm" type="text" placeholder="Search...">
-            <div class="ui button" id="submit">Search</div>
-            <button class="ui button" id="refresh">Refresh</button>
-            <div class="ui button" id="submit2">Search By Volume Id</div>
+        <div class="ui container">
+            <div class="ui icon input search-box">
+                <input id="searchTerm" type="text" placeholder="Search...">
+            </div>
+            <div class="ui buttons btn-group">
+                <button class="ui button primary" id="submit">Search</button>
+                <button class="ui button teal" id="submit2">Search By Volume Id</button>
+                <button class="ui button" id="refresh">Reset</button>
+            </div>
         </div>
     </section>
     <section class="ui container books">
@@ -35,9 +39,25 @@
     </section>
     <footer class="ui fluid footer">
         <div class="ui container">
-            BookFinder
+           <a href='#' id='btnFeedback'>Give Us Feedback</a>
         </div>
     </footer>
+    <div class="ui modal" id="modalFeedback">
+        <div class="header">Give Us Feedback</div>
+        <div class="content">
+            <div class="ui form">
+                <div class="field">
+                  <label>Message</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+        </div>
+        <div class="actions">
+            <div class="ui approve green button">Send</div>
+            <div class="ui cancel button">Cancel</div>
+          </div>
+
+      </div>
     <script src="./script.js"></script>
 </body>
 </html>
