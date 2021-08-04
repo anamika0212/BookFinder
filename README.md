@@ -1,5 +1,6 @@
 # Book Finder App
-An application that will allow users to search for books by entering a query (Title, Author, etc). Display the resulting books in a list on the page with all the corresponding data.
+An application that will allow users to search for books by entering a query (Title, Author, etc). Displays the resulting books in a list on the page with all the corresponding data.
+Link to the live page [here](https://anamika0212.github.io/BookFinder)
 
 User stories:
 - User enters a search query into an input field.
@@ -15,3 +16,8 @@ Built with:
 - CSS
 - Javascript
 - Google Book API
+
+References used:
+ google.com ,https://www.w3schools.com/, stackoverflow.com,https://developer.mozilla.org/, class recording etc.
+
+ ![Book Finder](assets/Book.gif?raw=true "Book Finder")
