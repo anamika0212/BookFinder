@@ -20,4 +20,4 @@ Built with:
 References used:
  google.com ,https://www.w3schools.com/, stackoverflow.com,https://developer.mozilla.org/, class recording etc.
 
- ![Book Finder](assets/Book.gif?raw=true "Book Finder")
+ ![Book Finder](assets/Images/Book.gif?raw=true "Book Finder")

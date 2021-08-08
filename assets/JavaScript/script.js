@@ -8,7 +8,7 @@ function renderBook(book) {
     return `<div class="column book">
         <div class="ui grid">
             <div class="four wide column img-box">
-                <img src="${book.imageLinks ? book.imageLinks.thumbnail : './assets/no-image.svg'}">
+                <img src="${book.imageLinks ? book.imageLinks.thumbnail : './assets/Images/no-image.svg'}">
             </div>
             <div class="twelve wide column">
                 <h2 class="title">${book.title}</h2>
