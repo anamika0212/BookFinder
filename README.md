@@ -18,6 +18,10 @@ Built with:
 - Google Book API
 
 References used:
- google.com ,https://www.w3schools.com/, stackoverflow.com,https://developer.mozilla.org/, class recording etc.
+ - [Google](google.com)
+ - [W3 Schools](https://www.w3schools.com/)
+ - [StackOverflow](https://stackoverflow.com)
+ - [Mozilla MDN Web Docs](https://developer.mozilla.org/)
+ - Class Recordings, Modules, etc.
 
  ![Book Finder](assets/Book.gif?raw=true "Book Finder")
